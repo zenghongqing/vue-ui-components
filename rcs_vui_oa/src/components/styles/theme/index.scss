@@ -1,0 +1,22 @@
+@import '../variable.scss';
+@import '../mixins.scss';
+@import './button.scss';
+html {
+    touch-action: manipulation;//避免浏览器300ms延时问题
+}
+body{
+    font-size:$font-size-default;
+    -webkit-tap-highlight-color:transparent;
+    tap-highlight-color:transparent;
+}
+input::-webkit-input-placeholder {
+    color: $color-placeholder;
+}
+a,button,input,textearea,select{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.vx-scroller {
+    position:relative;
+    @include scroll;
+}

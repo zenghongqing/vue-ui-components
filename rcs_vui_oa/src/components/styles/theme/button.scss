@@ -1,0 +1,58 @@
+@import '../variable.scss';
+@import '../mixins.scss';
+.#{$css-prefix} {
+    &btn {
+        @include button;
+        height: $size-height;
+        position: relative;
+        background: #fff;
+        box-sizing: border-box;
+        border-radius: $border-radius-base;
+        font-size: inherit;
+        cursor: default;
+        &--size {
+            &-large {
+                width: 100%;
+                display: block;
+            }
+            &-small {
+                height: 0.68rem;
+                padding: 0 0.05rem;
+            }
+        }
+        &--primary {
+            background-color: $color-primary;
+            color: #fff;
+            &.is-plain{
+                background-color:#fff;
+                color:$color-primary;
+                @include round-border($color-primary);
+            }
+        }
+        &--warning{
+            background-color: $color-warning;
+            color: #fff;
+            &.is-plain {
+                background-color:#fff;
+                color:$color-warning;
+                @include round-border($color-warning);
+            }
+        }
+        &--danger {
+            background-color: $color-danger;
+            color: #fff;
+            border: 0; 
+            &.is-plain {
+                background-color:#fff;
+                color:$color-warning;
+                @include round-border($color-warning);
+            }
+        }
+        &--link {
+            color: $color-primary;
+            border-radius: 0;
+            height: auto;
+            background: transparent;
+        }
+    }
+}
